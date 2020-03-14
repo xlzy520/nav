@@ -3,8 +3,8 @@
   <section class="index container">
     <div class="left-bar" :style="{left: isLeftbar ? 0 : '-249px'}">
       <div class="title">
-        <img class="icon-logo" src="/favicon.ico">
-        <span>猿梦极客导航</span>
+        <img class="icon-logo" src="/favicon.png">
+        <span>执笔-导航</span>
       </div>
       <el-row>
         <el-col :span="24">
@@ -15,12 +15,12 @@
             text-color="#6b7386"
             active-text-color="#fff"
           >
-            <el-submenu :index="item.name" v-for="(item,index) in newDataList" :key="item.name">
+            <el-submenu :index="index.toString()" v-for="(item,index) in data" :key="item.name">
               <template slot="title">
                 <i :class="item.icon"></i>
                 <span slot="title">{{item.name}}</span>
               </template>
-              <el-menu-item :index="nav._id" v-for="(nav,idx) in item.data" :key="nav._id">
+              <el-menu-item :index="nav.classify" v-for="(nav,idx) in item.data" :key="nav.classify">
                 <a :href="`#${nav.classify}`">
                   <i :class="nav.icon"></i>
                   <span slot="title">{{nav.classify}}</span>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <!-- 开发社区 -->
-        <div class="box" v-for="(item,index) in data" :key="index" :ref="`box-${index}`">
+        <div class="box" v-for="(item,index) in flatterList" :key="index" :ref="`box-${index}`">
           <a :id="`#${item.classify}`" :name="item.classify"></a>
           <div class="sub-category">
             <div>
@@ -56,15 +56,6 @@
           <NavItem :data="sub" v-for="(sub,idx) in item.sites" :key="'sub-'+idx"/>
         </div>
       </div>
-      <footer class="footer">
-        <div class="copyright">
-          <div>
-            Copyright © 2019- 2050
-            <a href="https://github.com/geekape/blog">钟储兵博客</a>
-            <a href="https://github.com/geekape/geek-navigation">导航源码下载</a>
-          </div>
-        </div>
-      </footer>
       <back-top/>
     </section>
   </section>
@@ -73,6 +64,7 @@
 <script>
 import BackTop from "@/components/BackTop";
 import NavItem from "@/components/NavItem";
+
 export default {
   data() {
     return {
@@ -88,43 +80,12 @@ export default {
     NavItem
   },
   computed: {
-    newDataList() {
-      const arr = [];
-      let product = {};
-      let operation = {};
-      let design = {};
-      let web = {};
-      // 产品
-      product.name = "产品";
-      product.icon = "csz czs-circle";
-      product.data = this.data.filter(
-        item => item.classify.indexOf("［产品］") != -1
-      );
-      arr.push(product);
-      // 运营
-      operation.name = "运营";
-      operation.icon = "csz czs-square";
-      operation.data = this.data.filter(
-        item => item.classify.indexOf("［运营］") != -1
-      );
-      arr.push(operation);
-      // 设计
-      design.name = "设计";
-      design.icon = "csz czs-triangle";
-      design.data = this.data.filter(
-        item => item.classify.indexOf("［设计］") != -1
-      );
-      arr.push(design);
-      // 前端
-      web.name = "前端";
-      web.icon = "csz czs-camber";
-
-      web.data = this.data.filter(
-        item => item.classify.indexOf("［前端］") != -1
-      );
-      arr.push(web);
-
-      return arr;
+    flatterList() {
+      let flatterList = []
+      this.data.map(value => {
+       flatterList = flatterList.concat(value.data)
+      });
+      return flatterList
     }
   },
   watch: {

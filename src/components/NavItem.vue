@@ -2,7 +2,7 @@
   <a class="item" target="_blank" :href="data.href">
       <div class="logo">
         <el-image :src="data.logo" fit="cover" lazy></el-image>
-        <span>{{data.name}}</span>
+        <span>{{data.title}}</span>
       </div>
       <div class="desc">{{data.desc || '这个网站什么描述也没有...'}}</div>
   </a>
@@ -12,6 +12,11 @@
 export default {
   props: {
     data: Object
+  },
+  mounted() {
+    if (this.data.length) {
+      console.log(this.data);
+    }
   }
 };
 </script>
