@@ -121,9 +121,10 @@ export default {
       window.pageYOffset = selfOffsetTop;
     },
 
-    async getData() {
-      const res = await this.$http.get("./nav.json");
-      this.data = res.data;
+    getData() {
+      this.$http.get("./nav.json").then(res =>{
+        this.data = res.data;
+      })
     },
     dataScroll() {
       const that = this;
@@ -153,17 +154,14 @@ export default {
     // window.addEventListener("scroll", this.handleScroll);
   },
   created() {
+    console.log(333);
     const that = this;
     this.getData();
     // window.addEventListener('scroll', this.dataScroll);
     window.onresize = () => {
       return (() => {
         window.screenWidth = document.body.clientWidth;
-        if (window.screenWidth < 481) {
-          that.isLeftbar = false;
-        } else {
-          that.isLeftbar = true;
-        }
+        that.isLeftbar = window.screenWidth >= 481;
       })();
     };
     window.onresize();
