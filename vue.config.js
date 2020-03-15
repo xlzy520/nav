@@ -1,12 +1,13 @@
 let path = require('path')
+const isProd = process.env.NODE_ENV === 'production'
 
 
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
-    publicPath: './',
-    chainWebpack: config => {
+  publicPath: isProd ? `https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/` : '/',
+  chainWebpack: config => {
         config.resolve.alias
             .set('images', resolve('src/assets/img/'))
             .set('styles', resolve('src/assets/styles/'))
