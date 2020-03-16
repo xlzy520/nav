@@ -2,7 +2,7 @@
   <a class="item" target="_blank" :href="data.href">
       <div class="logo">
         <el-image :src="data.logo" fit="cover" lazy></el-image>
-        <span>{{data.title}}</span>
+        <span :title="data.title">{{data.title}}</span>
       </div>
       <div class="desc">{{data.desc || '这个网站什么描述也没有...'}}</div>
   </a>
@@ -74,6 +74,13 @@ export default {
           vertical-align: middle;
           margin-right: 10px;
         }
+        span{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          white-space: normal;
+        }
       }
       .desc {
         color: gray;
@@ -92,8 +99,8 @@ export default {
 
 .el-image {
   width: 35px;
-  height: 35px;
-  border-radius: 50%;
+  /*height: 35px;*/
+  /*border-radius: 50%;*/
   overflow: hidden;
   margin-right: 5px;
 }
