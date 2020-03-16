@@ -3,7 +3,7 @@
   <section class="index container">
     <div class="left-bar" :style="{left: isLeftbar ? 0 : '-249px'}">
       <div class="title">
-        <img class="icon-logo" src="/favicon.png">
+        <img class="icon-logo" src="https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/favicon.png">
         <span>执笔-导航</span>
       </div>
       <el-row>
