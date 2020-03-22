@@ -677,13 +677,13 @@
                         "title": "发现导航 - 精选实用导航网站",
                         "href": "http://nav.xiejiahe.com/#/index?page=6&_=1583987526158",
                         "desc": "发现导航 - 精选实用导航网站",
-                        "logo": "http:/nav.xiejiahe.com/assets/icon/logo.png?20180426"
+                        "logo": "http://nav.xiejiahe.com/assets/icon/logo.png?20180426"
                     },
                     {
                         "title": "WebStack.cc - 设计师网址导航",
                         "href": "http://webstack.cc/cn/index.html",
                         "desc": "WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、素材资源网站，定时更新分享优质产品设计书签。www.webstack.cc",
-                        "logo": "http:/webstack.cc/assets/images/favicon.png"
+                        "logo": "http://webstack.cc/assets/images/favicon.png"
                     },
                     {
                         "title": "友情链接 | Evan's blog",
@@ -717,9 +717,9 @@
                     },
                     {
                         "title": "Easy Mock",
-                        "href": "https://www.easy-mock.com/",
-                        "desc": "在线模拟接口请求",
-                        "logo": "https://www.easy-mock.com/favicon.ico"
+                        "href": "https://easy-mock.bookset.io/login",
+                        "desc": "在线模拟接口请求,Easy Mock的私人站",
+                        "logo": "https://easy-mock.bookset.io/favicon.ico"
                     },
                     {
                         "title": "菜鸟工具 - 不止于工具",
@@ -863,7 +863,7 @@
                         "title": "天气插件 - 心知天气 - 天气预警 - 天气推送",
                         "href": "https://www.seniverse.com/widget?source=widgetV2",
                         "desc": "心知天气为企业和开发者提供完整的气象服务解决方案：天气数据 API、气象大数据、天气监控机器人、天气数据可视化平台与图层",
-                        "logo": "https://www.seniverse.com/widget?source=widgetV2/static.sencdn.com/brand/logo/logo-red-square-10x.png"
+                        "logo": "https://static.sencdn.com/brand/logo/logo-red-square-10x.png"
                     },
                     {
                         "title": "仿站小工具 v10.0 - 官方网站",
@@ -887,7 +887,7 @@
                         "title": "Chrome中文网 - 最新Chrome插件大全 - Chrome插件(谷歌浏览器插件) - Chrome应用商店 - 谷歌Chrome应用商店",
                         "href": "http://www.chromestore.cn/",
                         "desc": "Chrome中文网-提供最全、最新、最好用的Chrome浏览器插件下载，谷歌浏览器下载，开发者手册！",
-                        "logo": "http:/www.chromestore.cn/wp-content/themes/bigchrome/img/favicon.ico"
+                        "logo": "http://www.chromestore.cn/wp-content/themes/bigchrome/img/favicon.ico"
                     },
                     {
                         "title": "Crx4Chrome - Download CRX for Chrome Apps & Extensions",
@@ -923,7 +923,7 @@
                         "title": "Awesome-qr.js",
                         "href": "https://www.bitcat.cc/webapp/awesome-qr/index.html",
                         "desc": "一个极好的定制二维码工具",
-                        "logo": "暂无"
+                        "logo": "https://www-bitcat-cc-static.smartgslb.com/webapp/awesome-qr/assets/intro.png"
                     },
                     {
                         "title": "企查查-企业工商信息查询系统_查企业_查老板_查关系就上企查查!",
@@ -947,7 +947,7 @@
                         "title": "Gmail",
                         "href": "https://accounts.google.com/b/0/AddMailService",
                         "desc": "谷歌邮箱",
-                        "logo": "https://accounts.google.com/b/0/AddMailService/favicon.ico"
+                        "logo": "https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/assets/Gmail.ico"
                     },
                     {
                         "title": "Rem GIFs | Tenor",
@@ -1073,7 +1073,7 @@
                         "title": "pixiv",
                         "href": "https://www.pixiv.net/",
                         "desc": "日本最大的插画网站",
-                        "logo": "https://www.pixiv.net/favicon.ico"
+                        "logo": "https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/assets/pixiv.png"
                     },
                     {
                         "title": "哔哩哔哩相簿，绘你所想，拍你所爱",
@@ -1097,7 +1097,7 @@
                         "title": "连接 / Twitter",
                         "href": "https://twitter.com/i/connect_people",
                         "desc": "国外版微博",
-                        "logo": "https://twitter.com/favicon.ico"
+                        "logo": "https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/assets/twitter.png"
                     }
                 ]
             }
