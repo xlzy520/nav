@@ -122,29 +122,29 @@ export default {
     },
 
     getData() {
-      this.$http.get("./nav.json").then(res =>{
+      const isProd = process.env.NODE_ENV === 'production'
+      const baseUrl = isProd ? 'https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/' : './'
+      this.$http.get(baseUrl + "nav.json").then(res =>{
         this.data = res.data;
       })
     },
     dataScroll() {
-      const that = this;
       let scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
       let allSite = document.querySelectorAll(".box");
       for (let i = 0; i < allSite.length; i++) {
         if (scrollTop >= allSite[i].offsetTop) {
-          that.selfIndex = i;
+          this.selfIndex = i;
         }
       }
     },
     handleScroll() {
-      const that = this;
-      const length = that.data.length;
+      const length = this.data.length;
       const content = document.querySelectorAll(".box");
       const top = document.body.scrollTop || document.documentElement.scrollTop;
       for (let i = length - 1; i >= 0; i--) {
         if (top >= content[i].offsetTop - 20) {
-          that.active = i.toString();
+          this.active = i.toString();
           break;
         }
       }
@@ -154,14 +154,12 @@ export default {
     // window.addEventListener("scroll", this.handleScroll);
   },
   created() {
-    console.log(333);
-    const that = this;
     this.getData();
     // window.addEventListener('scroll', this.dataScroll);
     window.onresize = () => {
       return (() => {
         window.screenWidth = document.body.clientWidth;
-        that.isLeftbar = window.screenWidth >= 481;
+        this.isLeftbar = window.screenWidth >= 481;
       })();
     };
     window.onresize();
