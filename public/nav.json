@@ -939,7 +939,7 @@
                     },
                     {
                         "title": "Google 翻译",
-                        "href": "https://translate.google.cn/?sl=en&tl=zh-CN&hl=zh-CN&text=British+waste-processing+consultancy&source=dictionary#view=home&op=translate&sl=en&tl=zh-CN&text=British%20waste-processing%20consultancy",
+                        "href": "https://translate.google.cn",
                         "desc": "Google 的免费翻译服务可提供简体中文和另外 100 多种语言之间的互译功能，可让您即时翻译字词、短语和网页内容。",
                         "logo": "https://translate.google.cn/favicon.ico"
                     },
@@ -950,9 +950,9 @@
                         "logo": "https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/assets/Gmail.ico"
                     },
                     {
-                        "title": "Rem GIFs | Tenor",
-                        "href": "https://tenor.com/search/rem-gifs",
-                        "desc": "With Tenor, maker of GIF Keyboard, add popular Rem animated GIFs to your conversations. Share the best GIFs now >>>",
+                        "title": "Tenor",
+                        "href": "https://tenor.com",
+                        "desc": "查找完美匹配的GIF动画和视频的国外网站",
                         "logo": "https://tenor.com/assets/img/favicon/favicon-16x16.png"
                     },
                     {

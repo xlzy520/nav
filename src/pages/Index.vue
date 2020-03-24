@@ -122,9 +122,8 @@ export default {
     },
 
     getData() {
-      const isProd = process.env.NODE_ENV === 'production'
-      const baseUrl = isProd ? 'https://cdn.jsdelivr.net/gh/xlzy520/nav@gh-pages/' : './'
-      this.$http.get(baseUrl + "nav.json").then(res =>{
+      const baseUrl = 'https://cdn.jsdelivr.net/gh/xlzy520/static-resource/nav/nav.json'
+      this.$http.get(baseUrl).then(res =>{
         this.data = res.data;
       })
     },
